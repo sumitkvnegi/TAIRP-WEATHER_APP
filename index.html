@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Side Menu -->
+    <ul class="nav">
+      <li>
+        <img src="./assets/cloud-sun.svg" alt="nav-icon" />
+        <a href="#">Weather</a>
+      </li>
+      <li>
+        <img src="./assets/list.svg" alt="nav-icon" /> <a href="#">Cities</a>
+      </li>
+      <li><img src="./assets/map.svg" alt="nav-icon" /> <a href="#">Map</a></li>
+      <li>
+        <img src="./assets/settings-sliders.svg" alt="nav-icon" />
+        <a href="#">Settings</a>
+      </li>
+    </ul>
+
+    <!-- Main Container -->
+    <main>
+      <!-- Weather Container -->
+      <section class="weather">
+        <!-- Search Bar -->
+        <div class="search-bar">
+          <input type="text" placeholder="Search" id="search" />
+          <img src="./assets/search.svg" alt="" onclick="handleClick()" />
+        </div>
+
+        <!-- Weather Info -->
+        <div class="weather-info-container">
+          <!-- Main Info -->
+          <div class="main-info">
+            <div>
+              <div>
+                <p id="location">Location</p>
+                <p>Chance of rain: <span id="rain"></span></p>
+              </div>
+              <h1>Temperature</h1>
+            </div>
+            <img src="" alt="Weather Condition Icon" />
+          </div>
+
+          <!-- Detailed Info -->
+          <ul>
+            <li>
+              <img src="./assets/brightness.svg" alt="" />
+              <div><strong>UV INDEX:</strong> <span>-</span></div>
+            </li>
+            <li>
+              <img src="./assets/shower.svg" alt="" />
+              <div><strong>HUMIDITY:</strong> <span>-</span></div>
+            </li>
+            <li>
+              <img src="./assets/wind.svg" alt="" />
+              <div><strong>WIND:</strong> <span>-</span></div>
+            </li>
+            <li>
+              <img src="./assets/thermometer-half.svg" alt="" />
+              <div><strong>FEELS LIKE:</strong> <span>-</span></div>
+            </li>
+            <li>
+              <img src="./assets/eye.svg" alt="" />
+              <div><strong>VISIBILITY:</strong> <span>-</span></div>
+            </li>
+            <li>
+              <img src="./assets/gauge-circle-bolt.svg" alt="" />
+              <div><strong>PRESSURE:</strong> <span>-</span></div>
+            </li>
+            <li>
+              <img src="./assets/raindrops.svg" alt="" />
+              <div><strong>CHANCEOF RAIN:</strong> <span>-</span></div>
+            </li>
+            <li>
+              <img src="./assets/smoke.svg" alt="" />
+              <div><strong>CLOUD:</strong> <span>-</span></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Forecaset -->
+      <section class="forecast">
+        <div class="forcast1">
+          <ul id="astro">
+            <!-- "sunrise": "07:25 AM",
+                    "sunset": "04:06 PM",
+                    "moonrise": "01:20 PM",
+                    "moonset": "09:58 PM",
+                    "moon_phase": "Waxing Crescent",
+                    "moon_illumination": 34, -->
+            <li class="sunrise">
+              <img src="./assets/sun.png" alt="icon" />
+              <div><strong>sunrise</strong><span id="sunrise">2</span></div>
+            </li>
+            <li class="sunset">
+              <img src="./assets/natural.png" alt="icon" />
+              <div><strong>sunset</strong><span id="sunset">3</span></div>
+            </li>
+            <li class="moonrise">
+              <img src="./assets/moon.png" alt="icon" />
+              <div><strong>moonrise</strong><span id="moonrise">4</span></div>
+            </li>
+            <li class="moon_phase">
+              <img src="./assets/moon-phases.png" alt="icon" />
+              <div>
+                <strong>moon_phase</strong><span id="moonPhase">9</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="forecast-container"></div>
+      </section>
+    </main>
+  </body>
+  <script src="script2.js"></script>
+</html>
